@@ -1,0 +1,54 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button *ngIf="(toolbarVisible$ | async) === false" mat-icon-button class="ngx-menu-button" aria-label="Menu" (click)="sidenav.toggle()">
+      <mat-icon><img src="assets/white/icon-menu.svg"></mat-icon>
+    </button>
+    <h1>NGX Highmark</h1>
+    <span fxFlex></span>
+    <button mat-icon-button (click)="toggleTheme()">
+      <mat-icon>
+        <img [hidden]="theme === 'light'" src="assets/icon-light-on.svg">
+        <img [hidden]="theme === 'dark'" src="assets/icon-light-off.svg">
+      </mat-icon>
+    </button>
+    <a mat-icon-button href="https://github.com/jairmilanes/ngx-highmark">
+      <img src="assets/icon-github.svg">
+    </a>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="ngx-title-bar">
+    <p>Amazing Markdown and code highlighting with Marked & Highlight.js</p>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<nav *ngIf="toolbarVisible$ | async" mat-tab-nav-bar backgroundColor="primary" disableRipple #tabHeader>
+  <a mat-tab-link fxLayout="row" fxLayoutGap="8px" *ngFor="let route of routes" #tabLink="routerLinkActive"
+    [active]="tabLink.isActive"
+    [routerLink]="route.path"
+    routerLinkActive>
+    <span>{{ route.data?.['label'] }}</span>
+    <img src="../assets/white/icon-{{route.path}}.svg">
+  </a>
+</nav>
+
+<mat-sidenav-container class="ngx-sidebar-container" style="overflow: initial;">
+  <mat-sidenav #sidenav class="ngx-sidebar" mode="side" position="start" fixedInViewport [fixedTopGap]="56" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+    <div class="ngx-side-menu" cdkMenu>
+      <button class="ngx-side-menu-item"
+              cdkMenuItem
+              *ngFor="let route of routes"
+              [routerLink]="route.path"
+              routerLinkActive>
+        <img src="assets/orange/icon-{{route.path}}.svg">
+        <span>{{ route.data?.['label'] }}</span>
+      </button>
+    </div>
+  </mat-sidenav>
+
+  <mat-sidenav-content style="overflow: initial;">
+    <div class="outlet-wrapper" [@routeAnimation]="getRouteAnimation(outlet)" (@routeAnimation.Done)="handleFragment()">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

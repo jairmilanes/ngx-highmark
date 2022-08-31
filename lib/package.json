@@ -1,0 +1,38 @@
+{
+  "name": "ngx-highmark",
+  "version": "1.0.0",
+  "description": "Angular module that uses marked to parse markdown to html combined with Highlight.js for awesome syntax highlights",
+  "homepage": "https://github.com/jairmilanes/ngx-highmark",
+  "license": "MIT",
+  "author": {
+    "name": "Jair Milanes",
+    "email": "jmilanes-dev@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jairmilanes/ngx-highmark"
+  },
+  "keywords": [
+    "angular",
+    "ngx",
+    "markdown",
+    "parser",
+    "marked",
+    "marked.js",
+    "highlight.js",
+    "emoji"
+  ],
+  "dependencies": {
+    "@types/marked": "^4.0.3",
+    "emoji-toolkit": "^6.6.0",
+    "marked": "^4.0.17",
+    "highlight.js": "^11.6.0",
+    "tslib": "^2.3.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "^14.0.0",
+    "@angular/platform-browser": "^14.0.0",
+    "rxjs": "^6.5.3 || ^7.4.0",
+    "zone.js": "^0.11.4"
+  }
+}

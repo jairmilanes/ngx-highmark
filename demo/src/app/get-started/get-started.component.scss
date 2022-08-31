@@ -1,0 +1,11 @@
+:host {
+  display: block;
+
+  ::ng-deep {
+    markdown {
+      h1:first-child {
+        display: none;
+      }
+    }
+  }
+}

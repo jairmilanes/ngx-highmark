@@ -1,0 +1,40 @@
+<app-scrollspy-nav-layout [headings]="headings">
+  <h1>Plugins</h1>
+
+  <!-- PLUGINS - Emoji -->
+  <section>
+    <h2 id="emoji">Emoji plugin</h2>
+
+    <markdown ngPreserveWhitespaces>
+      #### Emoji-Toolkit file to include
+      ```javascript
+      node_modules/emoji-toolkit/lib/js/joypixels.min.js
+      ```
+      #### Directive
+      `emoji` - activate emoji plugin
+      ### Example
+    </markdown>
+
+    <markdown>
+      Using `emoji` input property on `markdown` component, directive or pipe allows you to convert shortnames to native unicode emojis.
+    </markdown>
+
+    <markdown [src]="'app/plugins/remote/emoji.html'"></markdown>
+
+    <markdown>
+      The example below illustrate `emoji` directive in action.
+    </markdown>
+
+    <div fxLayout="column" fxLayout.gt-sm="row" fxLayoutGap="16px">
+      <mat-form-field appearance="fill" color="accent" fxFlex.gt-sm="calc(50% - 8px)">
+        <textarea matInput [(ngModel)]="emojiMarkdown"></textarea>
+      </mat-form-field>
+
+      <markdown [data]="emojiMarkdown" emoji fxFlex.gt-sm="calc(50% - 8px)"></markdown>
+    </div>
+
+    <markdown emoji>
+      > :blue_book: You can refer to this [Emoji Cheat Sheet](https://github.com/ikatyang/emoji-cheat-sheet/blob/master/README.md) for a complete list of _shortnames_.
+    </markdown>
+  </section>
+</app-scrollspy-nav-layout>
