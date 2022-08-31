@@ -2,9 +2,6 @@
   <img alt="Ngx-Highmark Logo" src="https://github.com/jairmilanes/ngx-highmark/raw/master/demo/src/assets/ngx-highmark.png" />
 </p>
 <p align="center">
-  <a href="https://circleci.com/gh/jairmilanes/ngx-highmark">
-    <img alt="CircleCI Status" src="https://circleci.com/gh/jairmilanes/ngx-highmark/tree/master.svg?style=shield" />
-  </a>
   <a href="https://coveralls.io/github/jairmilanes/ngx-highmark?branch=master">
     <img alt="Coverage Status" src="https://coveralls.io/repos/github/jairmilanes/ngx-highmark/badge.svg?branch=master" />
   </a>
