@@ -39,7 +39,7 @@ chrome-profiler-events*.json
 /libpeerconnection.log
 /package
 /typings
-package-lock.json
+yarn-lock.json
 test-results.xml
 eslint.xml
 *.log
