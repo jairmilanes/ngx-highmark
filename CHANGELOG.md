@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.1.1](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.0...ngx-highmark-v1.1.1) (2022-09-03)
+
+
+### Bug Fixes
+
+* moved karma props to angular.json configurations ([12f4719](https://github.com/jairmilanes/ngx-highmark/commit/12f47190cfc9d135a53daf133c6fc69d76e449ed))
+* release branch workflow ([744bf22](https://github.com/jairmilanes/ngx-highmark/commit/744bf220f9616780573d98099833e0272add6fe0))
+* updated release action test configurations ([1a8f6db](https://github.com/jairmilanes/ngx-highmark/commit/1a8f6db5d5b6540a7da61947e653673b8f0f3b9a))
+
 ## [1.1.0](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.0.0...ngx-highmark-v1.1.0) (2022-09-03)
 
 
