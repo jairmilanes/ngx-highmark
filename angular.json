@@ -124,9 +124,17 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "lib/test.ts",
-            "tsConfig": "lib/tsconfig.spec.json",
-            "karmaConfig": "lib/karma.conf.js"
-          }
+            "tsConfig": "lib/tsconfig.spec.json"
+          },
+          "configurations": {
+            "production": {
+              "karmaConfig": "lib/karma.conf.prod.js"
+            },
+            "development": {
+              "karmaConfig": "lib/karma.conf.js"
+            }
+          },
+          "defaultConfiguration": "development"
         },
         "lint": {
           "builder": "@angular-eslint/builder:lint",

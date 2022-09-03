@@ -1,7 +1,7 @@
 {
   "packages": {
     ".": {
-      "token": "secrets.PLEASE_RELEASE_TOKEN",
+      "token": "secrets.TOKEN",
       "package-name": "ngx-highmark",
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
