@@ -1,0 +1,31 @@
+name: Publish to NPM
+
+on:
+  # Runs when a new release has been published
+  release:
+    types:
+      - published
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setting up Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 16
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Download Latest Artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: latest-lib
+          path: dist/lib
+
+      - name: Publish library to NPM
+        run: npm run publish:lib
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
