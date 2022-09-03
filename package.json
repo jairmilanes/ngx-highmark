@@ -1,6 +1,6 @@
 {
   "name": "ngx-highmark",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Angular module that uses marked to parse markdown to html combined with Highlight.js for awesome syntax highlights",
   "homepage": "https://github.com/jairmilanes/ngx-highmark",
   "license": "MIT",
