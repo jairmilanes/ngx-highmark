@@ -20,39 +20,51 @@ jobs:
     steps:
       - name: Checkout files
         uses: actions/checkout@v3
+
       - name: Setup NODE
         uses: actions/setup-node@v3
         with:
           node-version: 16
           cache: 'npm'
+
       - name: Install dependencies
         run: npm ci
-      - name: Lint files
-        run: npm run lint
+
       - name: Type check demo
         run: npm run type-check:demo
+
       - name: Type check lib
         run: npm run type-check:lib
-      - name: Test demo and lib
-        run: npm run test --watch=false --code-coverage --no-progress
+
+      - name: Lint files
+        run: npm run lint
+
       - name: Build for Github pages
         run: npm run gh-pages:build
+
       - name: Build publishable library
         run: npm run build:lib
+
       - name: Run post:bild tasks
         run: npm run postbuild:lib
-      - name: Create a release
-        uses: google-github-actions/release-please-action@v3
-        id: release
-        with:
-          command: manifest
+
+      - name: Test demo and lib
+        run: npm run test:ci
+
       - name: Save pages artifact
         uses: actions/upload-artifact@v3
         with:
           name: latest-pages
           path: dist/demo
+
       - name: Save lib artifact
         uses: actions/upload-artifact@v3
         with:
           name: latest-build
           path: dist/lib
+
+      - name: Create a release
+        uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          command: manifest
