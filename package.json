@@ -36,7 +36,7 @@
     "type-check:demo": "tsc --project ./demo/tsconfig.app.json --noEmit",
     "type-check:lib": "tsc --project ./lib/tsconfig.lib.json --noEmit",
     "test": "ng test",
-    "test:ci": "ng test --configuration=production --no-progress --browsers=ChromeHeadless",
+    "test:ci": "ng test --configuration=production",
     "coveralls": "cat \"./coverage/lcov.info\" | \"./node_modules/coveralls/bin/coveralls.js\"",
     "gh-pages:build": "npm run build:demo -- --aot --base-href /ngx-highmark/",
     "gh-pages:deploy": "angular-cli-ghpages --dir=\"dist/demo\" --name=\"CircleCI\" --email=\"circleci@email.com\" --no-silent",

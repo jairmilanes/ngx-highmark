@@ -128,7 +128,10 @@
           },
           "configurations": {
             "production": {
-              "karmaConfig": "lib/karma.conf.prod.js"
+              "karmaConfig": "lib/karma.conf.prod.js",
+              "watch": false,
+              "progress": false,
+              "browsers": "ChromeHeadless"
             },
             "development": {
               "karmaConfig": "lib/karma.conf.js"
