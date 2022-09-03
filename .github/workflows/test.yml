@@ -1,21 +1,20 @@
-name: Deploy lib and website
+name: Test Library
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
+  # Runs when a PR is ready for review
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
     branches:
       - next
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-# Allow one concurrent deployment
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
-
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout files
@@ -37,34 +36,34 @@ jobs:
         run: npm run type-check:lib
 
       - name: Lint files
+        id: syntax-pass
         run: npm run lint
 
-      - name: Build for Github pages
+      - name: Test demo and lib
+        id: test-pass
+        run: npm run test:ci
+
+      - name: Build Github Pages
+        id: pages-build
         run: npm run gh-pages:build
 
-      - name: Build publishable library
+      - name: Build NPM Library
+        id: lib-build
         run: npm run build:lib
 
-      - name: Run post:bild tasks
+      - name: Run post:build tasks
         run: npm run postbuild:lib
-
-      - name: Test demo and lib
-        run: npm run test:ci
 
       - name: Save pages artifact
         uses: actions/upload-artifact@v3
         with:
-          name: latest-pages
+          name: github-pages
           path: dist/demo
 
-      - name: Save lib artifact
+      - name: Save pages artifact
         uses: actions/upload-artifact@v3
+        id: uploaded-artifacts
         with:
-          name: latest-build
+          name: latest-lib
           path: dist/lib
 
-      - name: Create a release
-        uses: google-github-actions/release-please-action@v3
-        id: release
-        with:
-          command: manifest
