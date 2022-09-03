@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Ngx-Highmark Logo" src="https://github.com/jairmilanes/ngx-highmark/raw/master/demo/src/assets/ngx-highmark.png" />
+  <img alt="Ngx-Highmark Logo" src="https://github.com/jairmilanes/ngx-highmark/raw/master/demo/src/assets/ngx-highmark-logo.png" />
 </p>
 <p align="center">
   <a href="https://coveralls.io/github/jairmilanes/ngx-highmark?branch=master">
