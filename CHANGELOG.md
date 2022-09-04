@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.5](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.4...ngx-highmark-v1.1.5) (2022-09-04)
+
+
+### Bug Fixes
+
+* added download and create pages artifact steps ([cdbdcc1](https://github.com/jairmilanes/ngx-highmark/commit/cdbdcc1b0df38cdefa3b4f6ffde2995f27b0d76d))
+
 ## [1.1.4](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.3...ngx-highmark-v1.1.4) (2022-09-04)
 
 
