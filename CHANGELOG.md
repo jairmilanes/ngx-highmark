@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.4](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.3...ngx-highmark-v1.1.4) (2022-09-04)
+
+
+### Bug Fixes
+
+* pages deploy workflow config updates ([be8a13b](https://github.com/jairmilanes/ngx-highmark/commit/be8a13be5da71d7c871beafceca92b4e9eeb83dd))
+
 ## [1.1.3](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.2...ngx-highmark-v1.1.3) (2022-09-04)
 
 
