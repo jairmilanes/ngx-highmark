@@ -1,7 +1,6 @@
 name: Deploy Pages
 
 on:
-  # Runs when a new release has been published
   release:
     types:
       - published
