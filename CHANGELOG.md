@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.1...ngx-highmark-v1.1.2) (2022-09-04)
+
+
+### Bug Fixes
+
+* fixed release target branch ([6c9d5d4](https://github.com/jairmilanes/ngx-highmark/commit/6c9d5d42f9decc9a6ea980aa57c1b45ed13af987))
+
 ## [1.1.1](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.0...ngx-highmark-v1.1.1) (2022-09-03)
 
 
