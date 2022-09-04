@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.3](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.2...ngx-highmark-v1.1.3) (2022-09-04)
+
+
+### Bug Fixes
+
+* tuning actions workflow to fix release creation ([edcf887](https://github.com/jairmilanes/ngx-highmark/commit/edcf88758356bc92538dadcec49d440a2f776b2d))
+
 ## [1.1.2](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.1...ngx-highmark-v1.1.2) (2022-09-04)
 
 
