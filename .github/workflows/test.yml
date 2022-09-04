@@ -1,7 +1,6 @@
 name: Test Library
 
 on:
-  # Runs when a PR is ready for review
   pull_request:
     types:
       - opened

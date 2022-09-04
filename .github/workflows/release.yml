@@ -5,7 +5,7 @@ on:
     types:
       - closed
     branches:
-      - next
+      - master
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -13,6 +13,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
     steps:
       - name: Create a release PR
         uses: google-github-actions/release-please-action@v3

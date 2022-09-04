@@ -3,7 +3,7 @@
     ".": {
       "token": "secrets.TOKEN",
       "package-name": "ngx-highmark",
-      "target-branch": "next",
+      "target-branch": "master",
       "changelog-path": "CHANGELOG.md",
       "release-type": "node",
       "bump-minor-pre-major": false,
