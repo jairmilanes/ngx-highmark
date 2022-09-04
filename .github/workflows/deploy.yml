@@ -29,7 +29,18 @@ jobs:
         with:
           token: ${{secrets.TOKEN}}
 
-      - name: Deploy to GitHub Pages
+      - name: Download Latest Version
+        uses: actions/download-artifact@v3
+        with:
+          name: github-pages
+          path: dist/demo
+
+      - name: Create TAR artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: dist/demo
+
+      - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v1
         with:
