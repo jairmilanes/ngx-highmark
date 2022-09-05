@@ -34,7 +34,9 @@ jobs:
         with:
           name: github-pages
           path: dist/demo
+          workflow: test.yml
           github_token: ${{secrets.TOKEN}}
+          search_artifacts: true
 
       - name: Create TAR artifact
         uses: actions/upload-pages-artifact@v1
