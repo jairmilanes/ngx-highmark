@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.6](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.5...ngx-highmark-v1.1.6) (2022-09-05)
+
+
+### Bug Fixes
+
+* switched download artifact action to support cross workflow ([dc65fc8](https://github.com/jairmilanes/ngx-highmark/commit/dc65fc8c48471204503f6bab57c48e322dafe58b))
+
 ## [1.1.5](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.4...ngx-highmark-v1.1.5) (2022-09-04)
 
 
