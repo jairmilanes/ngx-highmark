@@ -30,10 +30,11 @@ jobs:
           token: ${{secrets.TOKEN}}
 
       - name: Download Latest Version
-        uses: actions/download-artifact@v3
+        uses: dawidd6/action-download-artifact@v2
         with:
           name: github-pages
           path: dist/demo
+          github_token: ${{secrets.TOKEN}}
 
       - name: Create TAR artifact
         uses: actions/upload-pages-artifact@v1
