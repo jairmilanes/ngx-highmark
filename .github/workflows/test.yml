@@ -44,14 +44,11 @@ jobs:
 
       - name: Build Github Pages
         id: pages-build
-        run: npm run gh-pages:build
+        run: npm run build:demo
 
       - name: Build NPM Library
         id: lib-build
         run: npm run build:lib
-
-      - name: Run post:build tasks
-        run: npm run postbuild:lib
 
       - name: Save pages artifact
         uses: actions/upload-artifact@v3
