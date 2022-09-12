@@ -62,7 +62,10 @@
                   "with": "demo/src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/ngx-highmark/",
+              "aot": true,
+              "progress": false
             },
             "development": {
               "buildOptimizer": false,
