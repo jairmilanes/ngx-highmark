@@ -29,23 +29,9 @@ jobs:
         with:
           token: ${{secrets.TOKEN}}
 
-      - name: Download Latest Version
-        uses: dawidd6/action-download-artifact@v2
-        with:
-          name: github-pages
-          path: dist/demo
-          workflow: test.yml
-          github_token: ${{secrets.TOKEN}}
-          search_artifacts: true
-
-      - name: Create TAR artifact
-        uses: actions/upload-pages-artifact@v1
-        with:
-          path: dist/demo
-
       - name: Deploy
         id: deployment
-        uses: actions/deploy-pages@v1
+        uses: jairmilanes/cross-workflow-github-pages-deploy@v1
         with:
           artifact_name: github-pages
           token: ${{secrets.TOKEN}}
