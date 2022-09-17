@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.7](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.6...ngx-highmark-v1.1.7) (2022-09-17)
+
+
+### Features
+
+* changed pages deploy action to use own new cross-workflow action ([f109410](https://github.com/jairmilanes/ngx-highmark/commit/f109410d63970ca16a400798a0191a1c794b8b5f))
+
+
+### Miscellaneous Chores
+
+* release 1.1.7 ([c5572b8](https://github.com/jairmilanes/ngx-highmark/commit/c5572b803587f2ef8ae474e109a45081d3047d7a))
+
 ## [1.1.6](https://github.com/jairmilanes/ngx-highmark/compare/ngx-highmark-v1.1.5...ngx-highmark-v1.1.6) (2022-09-05)
 
 
