@@ -49,3 +49,6 @@ eslint.xml
 # System files
 .DS_Store
 Thumbs.db
+
+.secrets
+.env
